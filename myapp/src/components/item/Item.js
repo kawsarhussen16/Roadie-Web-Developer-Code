@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "../../assets/Software-Box-Mock-Up.jpg";
 import "./Item.style.scss";
-
+import CustomizedDialogs from "../Dialog/Dialog";
 const Item = (props) => {
     return (
         <div className="item-container">
@@ -22,7 +22,7 @@ const Item = (props) => {
                     </li>
                 </p>
                 <div className="item-buttons">
-                    <button>LEAVE REVIEW</button>
+                    <CustomizedDialogs />
                     <button className="button-primary">ADD TO CART</button>
                 </div>
             </span>

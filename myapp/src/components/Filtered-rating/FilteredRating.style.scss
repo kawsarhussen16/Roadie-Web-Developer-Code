@@ -1,0 +1,18 @@
+.star-rating-container {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    .star-rating {
+        margin-top: 10px;
+        p {
+            width: 50px;
+            font-size: 10px;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        display: flex;
+        .rating-bar {
+            width: 150px;
+        }
+    }
+}
