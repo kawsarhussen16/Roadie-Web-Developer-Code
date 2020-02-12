@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./components/nav-bar/NavBar.js";
-import CustomerReviews from "./components/customer-reviews/CustomerReviews.js";
+import CustomerReviews from "./components/customer-reviews/CustomerReviews";
 
 import "./App.css";
 
