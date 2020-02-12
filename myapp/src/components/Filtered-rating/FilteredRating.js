@@ -1,5 +1,5 @@
 import React from "react";
-import RatingBar from "../RatingBar/RatingBar";
+import RatingBar from "../RatingBar/RatingBar.js";
 import "./FilteredRating.style.scss";
 
 const findPercentage = (data, rating) => {
