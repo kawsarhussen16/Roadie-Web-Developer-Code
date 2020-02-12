@@ -2,7 +2,7 @@ const Data = [
     {
         username: "John",
         headline: "Perfect",
-        date: Date.now(),
+        date: new Date(),
         comment:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
         rating: 5
@@ -10,7 +10,7 @@ const Data = [
     {
         username: "Melissa",
         headline: "Great Device",
-        date: Date.now(),
+        date: new Date(),
         comment:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
         rating: 4
@@ -18,26 +18,34 @@ const Data = [
     {
         username: "David",
         headline: "Not Bad",
-        date: Date.now(),
+        date: new Date(),
         comment:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
         rating: 4
     },
     {
-        username: "John",
+        username: "Donald",
         headline: "Perfect",
-        date: Date.now(),
+        date: new Date(),
         comment:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
         rating: 5
     },
     {
-        username: "John",
+        username: "Barack",
         headline: "Easy Installation",
-        date: Date.now(),
+        date: new Date(),
         comment:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
         rating: 5
+    },
+    {
+        username: "Hilary",
+        headline: "Received damaged item",
+        date: new Date(),
+        comment:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        rating: 1
     }
 ];
 

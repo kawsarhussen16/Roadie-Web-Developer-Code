@@ -3,13 +3,15 @@ import "./CustomerReviews.style.scss";
 import RatingStar from "../RatingStar/RatingStar";
 import data from "../data/Data";
 import FilteredRating from "../Filtered-rating/FilteredRating";
+import ReviewDetail from "../Review-detail/ReviewDetail";
 
 class CustomerReviews extends React.Component {
     constructor() {
         super();
         this.state = {
             reviews: data,
-            filtered: ""
+            filtered: "",
+            rating: ""
         };
     }
     filterByRating = (number) => {
@@ -19,22 +21,48 @@ class CustomerReviews extends React.Component {
             filtered: filtered
         });
     };
+    componentDidMount() {
+        this.countingRating();
+    }
+    countingRating = () => {
+        let rating = {
+            5: 0,
+            4: 0,
+            3: 0,
+            2: 0,
+            1: 0
+        };
+        let reviews = this.state.reviews;
+        reviews.map((reviews) =>
+            Object.values(reviews).map((i) =>
+                rating[i] !== undefined ? (rating[i] += 1) : null
+            )
+        );
+        this.setState({
+            rating: rating
+        });
+    };
 
     render() {
-        const reviews = this.state.reviews;
+        const { reviews, filtered, rating } = this.state;
+        const data = filtered.length > 0 ? filtered : reviews;
         const value = reviews
             .map((review) => review.rating)
             .reduce((acc, cur) => acc + cur);
         const averageRating = Math.floor(value / reviews.length);
         return (
             <div className="customer-review-container">
-                <h6>CUSTOMER REVIEWS</h6>
-                <RatingStar value={averageRating} />
-                <p>{reviews.length} reviews</p>
-                <FilteredRating
-                    filterByRating={this.filterByRating}
-                    data={this.state.reviews}
-                />
+                <div className="filtered-buttons">
+                    <h6>CUSTOMER REVIEWS</h6>
+                    <RatingStar value={averageRating} showOutOf />
+                    <p>{reviews.length} reviews</p>
+                    <FilteredRating filterByRating={this.filterByRating} data={rating} />
+                </div>
+                <div className="review-detail-container">
+                    {data.map((review) => (
+                        <ReviewDetail key={review.username} data={review} />
+                    ))}
+                </div>
             </div>
         );
     }

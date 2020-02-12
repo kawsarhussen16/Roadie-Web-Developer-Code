@@ -16,12 +16,12 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-const RatingStar = ({ value }) => {
+const RatingStar = ({ value, showOutOf }) => {
     const classes = useStyles();
     return (
         <div className={classes.root}>
             <Rating name="size-large" defaultValue={value} size="medium" readOnly />
-            <p> {value} out of 5</p>
+            {showOutOf ? <p> {value} out of 5</p> : null}
         </div>
     );
 };

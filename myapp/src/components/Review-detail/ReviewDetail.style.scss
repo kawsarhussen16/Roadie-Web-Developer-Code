@@ -1,0 +1,14 @@
+.review-detail {
+    border: 1px solid pink;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    .rating-star {
+        margin-left: 130px;
+        margin-top: -5px;
+    }
+    .user-tag {
+        font-size: 10px;
+        margin: -5px 0 10px 0;
+    }
+}
