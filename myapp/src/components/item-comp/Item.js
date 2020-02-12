@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "../../assets/Software-Box-Mock-Up.jpg";
 import "./Item.style.scss";
-import CustomizedDialogs from "../Dialog/Dialog.js";
+import CustomizedDialogs from "../dialog-popup/Dialog.js";
 
 const Item = ({ addReview }) => {
     return (

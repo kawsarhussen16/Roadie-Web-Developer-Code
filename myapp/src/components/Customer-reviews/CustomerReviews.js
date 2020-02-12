@@ -1,10 +1,10 @@
 import React from "react";
 import "./CustomerReviews.style.scss";
-import RatingStar from "../RatingStar/RatingStar.js";
+import RatingStar from "../rating-star/RatingStar.js";
 import data from "../data/Data.js";
-import FilteredRating from "../Filtered-rating/FilteredRating.js";
-import ReviewDetail from "../Review-detail/ReviewDetail.js";
-import Item from "../Item/Item.js";
+import FilteredRating from "../filtered-rating/FilteredRating.js";
+import ReviewDetail from "../review-detail/ReviewDetail.js";
+import Item from "../item-comp/Item.js";
 
 class CustomerReviews extends React.Component {
     constructor() {

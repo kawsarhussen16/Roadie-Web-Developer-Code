@@ -1,6 +1,6 @@
 import React from "react";
 import "./ReviewDetail.style.scss";
-import RatingStar from "../RatingStar/RatingStar.js";
+import RatingStar from "../rating-star/RatingStar.js";
 
 const ReviewDetail = ({ data }) => {
     const { headline, username, date, comment, rating } = data;
